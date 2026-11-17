@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "idoc-doctor"
+version = "0.1.0"
+description = "Explain SAP IDoc statuses and XML IDocs offline: business summary, lint for the mistakes behind status 51/56/60, and an MCP server for Claude and other AI assistants."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "SatchelSoft" }]
+keywords = ["sap", "idoc", "edi", "mcp", "s4hana", "cpi", "integration"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: Office/Business",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/sammyawad/idoc-doctor"
+Issues = "https://github.com/sammyawad/idoc-doctor/issues"
+
+[project.scripts]
+idoc-doctor = "idoc_doctor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
